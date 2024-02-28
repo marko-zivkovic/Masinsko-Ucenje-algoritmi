@@ -1,0 +1,59 @@
+Problem 2: Regresija 
+
+U arhivi se nalazi skup podataka funky.csv specifično kreiran za potrebe ovog problema.
+a) [10p] U fajlu 2a.py na ovom skupu podataka primeniti polinomijalnu regresiju, uz
+variranje stepena polinoma u intervalu [1, 6]. Pokretanje programa treba da proizvede
+dva grafika: jedan na kome su u 2D prikazani svi podaci iz skupa kao i svih 6
+regresionih krivih, i drugi na kome je prikazana zavisnost finalne funkcije troška na
+celom skupu (ne u poslednjoj epohi treninga!) od stepena polinoma. Šta možemo
+primetiti? Diskutovati u komentaru ispod koda.
+b) [10p] U fajlu 2b.py trenirati polinomijalnu regresiju sa fiksnim stepenom polinoma 3, ali
+uz dodatu L2 regularizaciju. Za parametar lambda probati vrednosti iz skupa {0, 0.001,
+0.01, 0.1, 1, 10, 100}. U redu je krenuti od kompletne kopije prethodnog fajla.
+Pokretanje programa treba da kreira dva grafika slična onima u prethodnom delu
+problema: grafik svih podataka sa 7 regresionih krivih (za različite vrednosti lambda) i
+grafik zavisnosti finalne funkcije troška na celom skupu od parametra lambda. Šta sada
+možemo primetiti? Diskutovati u komentaru ispod koda.
+
+Problem 3: KNN
+
+U arhivi se nalazi skup podataka spaceship-titanic.csv u kojem se nalaze podaci o
+putnicima. Detaljan opis podataka i cilj istraživanja možete naći ovde.
+a) [10p] U fajlu 3 a.py podeliti skup podataka na trening deo i test deo. Takođe, podatke
+je potrebno prilagoditi za upotrebu u algoritmu. U podacima postoje nedefinisane
+vrednosti (NaN), kategoričke vrednosti itd. Nakon toga primeniti netežinsku verziju k-NN 
+algoritma uzimajući u obzir samo RoomService i FoodCourt feature-e, za k=15.
+Pokretanje programa treba da primeni k-NN i ispiše accuracy na test skupu. Takođe,
+treba da kreira i prikaže 2D grafik na kome su prikazani trening podaci, pri čemu su
+različite klase obojene različitom bojom. Na istom grafiku prikazati oblasti koje bivaju
+klasifikovane u svaku od klasa (površina grafika koja pripada odgovarajućoj klasi).
+b) [10p] U fajlu 3b.py koristiti iste feature-e ali za vrednost parametra k birati brojeve od
+1 do 50. U redu je krenuti od kompletne kopije prethodnog fajla. Pokretanje programa
+treba da prikaže grafik zavisnosti accuracy metrike na test skupu u odnosu na vrednost
+parametra k. Koje k je najbolji izbor? Diskutovati u komentaru ispod koda.
+c) [5p] U fajlu 3c.py krenuti od kopije prethodnog fajla ali ovaj put uključiti svaki feature
+prisutan u originalnom fajlu. Pokretanje treba ponovo da prikaže isti grafik kao u
+prethodnom delu. Uporediti ta dva grafika u komentaru ispod koda.
+
+Problem 4: Rad sa tekstom / Naive Bayes 
+
+U arhivi se nalazi datoteka disaster-tweets.csv koja sadrži skup tvitova za klasifikaciju.
+Detaljan opis podataka i cilj istraživanja možete naći ovde. Kompletno rešenje za ovaj problem
+(oba dela) treba uneti u fajl 4.py. Pokretanje ovog fajla treba da izvrši sve pomenuto u
+nastavku problema i ispiše sve relevantne rezultate.
+a. [30p] Očistiti skup podataka i zatim kreirati feature vektore metodama po izboru.
+Podeliti skup podataka na trening i test skup (po odnosu 80:20). Fitovati Multinomial
+Naive Bayes model. Neophodan je accuracy na test skupu od barem 65% (prosečan
+u tri uzastopna pokretanja programa).
+b. [10p] Pronaći 5 najčešće korišćenih reči u pozitivnim tvitovima. Isto uraditi i za
+negativne i prokomentarisati rezultate (u komentaru koda). Ako uvedemo metriku
+LR(reč) kao LR(reč) = br. poj. u poz. tvitovima (reč) / br. poj. u neg. tvitovima (reč)
+pronaći 5 reči sa najvećom i 5 reči sa najmanjom vrednošću ove metrike. Metrika se
+definiše samo za reči koje se barem 10 puta pojavljuju u pozitivnom, i 10 puta u
+negativnom korpusu, nakon čišćenja podataka. Prokomentarisati 10 ovako dobijenih
+reči, uporediti sa prethodnim rezultatima, i objasniti značenje metrike LR u komentaru
+ispod koda.
+Hint: Obratite posebnu pažnju na čišćenje podataka. Evaluirajte dobijene “čiste” podatke dok
+ne dođete do dovoljno kvalitetne metode čišćenja za ovaj skup podataka.
+Hint: Ukoliko koristite BoW pokušajte da limitirate vokabular na 10000 ili manje najčešće
+korišćenih reči u celom skupu podataka kako feature vektori ne bi bili previše dugački.

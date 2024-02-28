@@ -1,0 +1,44 @@
+TODO popuniti odgovorima na pitanja iz problema 1
+1 ZADATAK
+Koja je razlika između k-fold, leave one out i random subsampling cross validation
+algoritama?
+
+Glavne razlike između ovih tehnika su u tome kako se podaci dele na skupove za obuku 
+i testove i koliko puta se model obučava i procenjuje. 
+K-fold unakrsna validacija i LOO unakrsna validacija su determinističke, što znači 
+da uvek koriste iste podele podataka, dok je cross validation stohastička, 
+što znači da svaki put koristi različite podele. 
+LOO unakrsna validacija je računarski najskuplja, ali pruža najtačniju procenu performansi modela. 
+K-fold unakrsna validacija uspostavlja ravnotežu između troškova računara i tačnosti. 
+cross validation je najjeftinija računski skupa, ali može biti manje precizna zbog 
+male veličine testnih skupova.
+
+2 ZADATAK
+Objasniti razliku između Gaussian, Multinomial i Bernouli Naive Bayes metoda?
+
+Glavna razlika između ovih metoda je u načinu na koji modeliraju distribuciju verovatnoće karakteristika. 
+Gausov Naive Bayes pretpostavlja da su karakteristike normalno raspoređene, 
+dok Multinomski i Bernuli Naive Bayes pretpostavljaju da su karakteristike diskretne. 
+Multinomijalni Naive Bayes je prikladan za podatke zasnovane na brojanju, 
+dok je Bernuli Naive Bayes prikladan za binarne podatke. 
+Gausov Naive Bayes je prikladan za kontinuirane podatke.
+Generalno, izbor Naive Bayes metode za upotrebu zavisi od prirode podataka koji se analiziraju.
+
+3 ZADATAK
+Objasniti pojam “linearna separabilnost”? Da li podaci grupisani u više od 2
+klastera mogu biti linearno separabilni?
+
+linearna separabilnost je svojstvo skupa podataka gde dve klase tačaka podataka 
+mogu biti razdvojene hiperravninom u prostoru obeležja. 
+Hiperravan je višedimenzionalni analog linije ili ravni koji deli prostor obeležja na dva regiona,
+po jedan za svaku klasu. Linearna separabilnost skupa podataka zavisi od broja karakteristika, 
+distribucije podataka i stepena preklapanja između klastera. U nekim slučajevima, klasteri mogu biti 
+dobro razdvojeni i linearno odvojivi, dok u drugim slučajevima klasteri mogu biti složeniji i 
+zahtevaju nelinearnu granicu odluke da bi ih razdvojili.
+Drugim rečima, ako je skup podataka linearno odvojiv, to znači da postoji linearna granica odluke 
+koja može savršeno klasifikovati tačke podataka u njihove odgovarajuće klase. Linearna separabilnost 
+odlučivanja može se definisati kao linearna kombinacija karakteristika, tako da jedna strana granice
+odgovara jednoj klasi, a druga strana drugoj klasi.
+
+Ako su podaci grupisani u više od dva klastera, oni mogu ili ne moraju biti linearno separabilni. 
+
